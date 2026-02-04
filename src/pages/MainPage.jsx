@@ -1753,9 +1753,9 @@ export default function DedicatedDevelopersWebsite() {
               </h3>
               <div className="space-y-6">
                 {[
-                  { icon: Mail, title: 'Email', info: 'info@ecodetechnologies.com', color: 'from-yellow-400 to-orange-500' },
-                  { icon: Phone, title: 'Phone / WhatsApp', info: '+1 (555) 123-4567', color: 'from-green-400 to-green-600' },
-                  { icon: Globe, title: 'Website', info: 'www.ecodetechnologies.com', color: 'from-blue-400 to-blue-600' }
+                //   { icon: Mail, title: 'Email', info: 'info@ecodetechnologies.com', color: 'from-yellow-400 to-orange-500' },
+                  { icon: Phone, title: 'Phone / WhatsApp', info: '+91-89058-49606', color: 'from-green-400 to-green-600' },
+                  { icon: Globe, title: 'Website', info: 'www.ecodetechnologies.co', color: 'from-blue-400 to-blue-600' }
                 ].map((item, index) => {
                   const Icon = item.icon;
                   return (
