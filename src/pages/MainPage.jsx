@@ -699,9 +699,10 @@ export default function DedicatedDevelopersWebsite() {
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mt-6"></div>
           </div>
-
+              <div class="absolute top-60 left-10 w-60 h-60 bg-yellow-200 rounded-full blur-3xl opacity-40 animate-float"></div>
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
+            <div className="flex items-center">
             <div className="animate-fadeInLeft">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                 <MessageSquare className="text-yellow-600" />
@@ -709,29 +710,61 @@ export default function DedicatedDevelopersWebsite() {
               </h3>
               <div className="space-y-6">
                 {[
-                //   { icon: Mail, title: 'Email', info: 'info@ecodetechnologies.com', color: 'from-yellow-400 to-orange-500' },
-                  { icon: Phone, title: 'Phone / WhatsApp', info: '+91-89058-49606', color: 'from-green-400 to-green-600' },
-                  { icon: Globe, title: 'Website', info: 'www.ecodetechnologies.co', color: 'from-blue-400 to-blue-600' }
+                {
+                    icon: Mail,
+                    title: 'Email',
+                    info: '777.m.priya@gmail.com',
+                    link: 'mailto:777.m.priya@gmail.com',
+                    color: 'from-yellow-400 to-orange-500',
+                    },
+                    {
+                    icon: Phone,
+                    title: 'Phone / WhatsApp',
+                    info: '+91-89058-49606',
+                    // WhatsApp uses international format WITHOUT + or dashes
+                    link: 'https://wa.me/918905849606',
+                    color: 'from-green-400 to-green-600',
+                    },
+                    {
+                    icon: Globe,
+                    title: 'Website',
+                    info: 'www.ecodetechnologies.co',
+                    link: 'https://www.ecodetechnologies.co',
+                    color: 'from-blue-400 to-blue-600',
+                    },
                 ].map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <div 
-                      key={index}
-                      className="flex items-start gap-4 group hover:translate-x-2 transition-transform duration-300"
+                <div
+                    key={index}
+                    className="flex items-start gap-4 group hover:translate-x-2 transition-transform duration-300"
+                >
+                    <div
+                    className={`bg-gradient-to-br ${item.color} p-3 rounded-lg group-hover:scale-110 transition-transform shadow-lg`}
                     >
-                      <div className={`bg-gradient-to-br ${item.color} p-3 rounded-lg group-hover:scale-110 transition-transform shadow-lg`}>
-                        <Icon className="text-white" size={24} />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
-                        <p className="text-gray-600">{item.info}</p>
-                      </div>
+                    <Icon className="text-white" size={24} />
                     </div>
-                  );
+
+                    <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                        {item.title}
+                    </h4>
+
+                    <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-blue-600 transition-colors underline-offset-4"
+                    >
+                        {item.info}
+                    </a>
+                    </div>
+                </div>
+                );
                 })}
               </div>
 
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <h4 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <Star className="text-yellow-500" />
                   Connect With Us
@@ -752,7 +785,8 @@ export default function DedicatedDevelopersWebsite() {
                     );
                   })}
                 </div>
-              </div>
+              </div> */}
+            </div>
             </div>
 
             {/* Contact Form */}
