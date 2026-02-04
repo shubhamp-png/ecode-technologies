@@ -5,10 +5,11 @@
   "type": "module",
   "homepage": "https://shubhamp-png.github.io/ecode-technologies",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --force",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+     "lint": "eslint .",
+    "preview": "vite preview"
+    
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
